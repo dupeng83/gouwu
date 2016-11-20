@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+</head>
+<body>
+	<table>
+    <tr>
+        <td>商品名</td>
+        <td>价格</td>
+        <td>购买数量</td>
+        <td></td>
+    </tr>
+    <foreach name="list" item="vo">
+  		<tr>
+  			<td>{$vo['Goods']['name']}</td>
+  			<td>{$vo['Goods']['price']}</td>
+  			<td>{$vo.goods_amount}</td>
+  			<td><a href="__MODULE__/Cart/delete_item/cart_id/{$vo.id}">删除</a></td>
+  		</tr>
+    </foreach>
+	</table>
+  <a href="__MODULE__/Index/index">继续购物</a> <a href="__MODULE__/Cart/cart_submit">去结算</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>首页</title>
+ </head>
+ <body>
+
+  <present name="Think.session.username">
+   	<a href="__MODULE__/Cart/show_cart">购物车</a>
+   	<a href="__MODULE__/Login/logout">退出</a>
+  <else />
+    <a href="__MODULE__/Login/login">登录</a>
+    <a href="__MODULE__/Login/register">注册</a>
+  </present>
+
+	<h1>商品列表</h1>
+  <foreach name="list" item="vo" >    
+  	<p><a href="__MODULE__/Goods/goods_detail/id/{$vo.id}">{$vo.name}</a></p>
+  </foreach>
+ 	
+ </body>
+ </html> 

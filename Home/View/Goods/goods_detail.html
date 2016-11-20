@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{$item.name}商品详情</title>
+</head>
+<body>
+	<h1>{$item.name}</h1>
+	<h2>价格:{$item.price}</h2>
+	<h2>规格:{$item.size}</h2>
+	图片:<img src="__PUBLIC__/Uploads/手表.jpg">
+  
+  <p>
+	<form action="__MODULE__/Goods/goods_detail_post" method="POST">
+    <input type="number" placeholder="购买数量" name="buy_amount" min="1" max="1000">
+    <input type="hidden" name="goods_id" value="{$item.id}">
+    <input type="submit" name="" value="加入购物车">  
+
+	</form>
+  </p>
+
+	
+</body>
+</html>
